@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import NLink from "./NavLink";
+import NavLink from "./NavLink";
 import MenuOverlay from "./MenuOverlay";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 const navLinks = [
@@ -50,7 +50,7 @@ const Navbar = () => {
           <ul className="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NLink href={link.path} title={link.title} />
+                <NavLink href={link.path} title={link.title} />
               </li>
             ))}
           </ul>
