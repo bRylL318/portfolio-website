@@ -2,14 +2,16 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
+    title: "AudioNex Learning Management System",
+    description:
+      "is Learning Management System that is integrated in Microsoft Azure",
+    image: "/images/projects/AudioNexlogo.png",
+    tag: ["All", "Web", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -24,12 +26,12 @@ const projectsData = [
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
+    title: "MovieLand",
+    description: "Movie Search",
+    image: "/images/projects/movieland.png",
+    tag: ["All", "Web", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://reactjs-movieapp.vercel.app/",
   },
   {
     id: 4,
@@ -100,6 +102,26 @@ const ProjectsSection = () => {
           isSelected={tag === "Mobile"}
         />
       </div>
+      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+        {filteredProjects.map((project, index) => (
+          <motion.li
+            key={index}
+            variants={cardVariants}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            transition={{ duration: 0.3, delay: index * 0.4 }}
+          >
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              imgUrl={project.image}
+              gitUrl={project.gitUrl}
+              previewUrl={project.previewUrl}
+            />
+          </motion.li>
+        ))}
+      </ul>
     </section>
   );
 };
