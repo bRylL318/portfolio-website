@@ -56,7 +56,10 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {/* {navbarOpen ? <MenuOverlay links={navLinks} /> : null} */}
+      <div className={`${navbarOpen ? "block" : "hidden"} md:hidden lg:hidden`}>
+        <MenuOverlay links={navLinks} />
+      </div>
     </nav>
   );
 };
