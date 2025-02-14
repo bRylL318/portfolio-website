@@ -10,7 +10,7 @@ const projectsData = [
     title: "AudioNex Learning Management System",
     description:
       "is Learning Management System that is integrated in Microsoft Azure",
-    image: "/portfolio-website/images/projects/AudioNexlogo.png",
+    image: "/portfolio-website/images/AudioNexlogo.png",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
@@ -28,7 +28,7 @@ const projectsData = [
     id: 2,
     title: "MovieLand",
     description: "Movie Search",
-    image: "/portfolio-website/images/projects/movieland.png",
+    image: "/portfolio-website/images/movieland.png",
     tag: ["All", "Web", "Mobile"],
     gitUrl: "/",
     previewUrl: "https://reactjs-movieapp.vercel.app/",
