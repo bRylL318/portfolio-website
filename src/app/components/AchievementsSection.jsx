@@ -15,16 +15,16 @@ const achievementsList = [
     value: "6",
     postfix: "+",
   },
-  {
-    // prefix: "~",
-    metric: "Users",
-    value: "250000.00",
-    postfix: "+",
-  },
-  {
-    metric: "Awards",
-    value: "2",
-  },
+  // {
+  // prefix: "~",
+  // metric: "Users",
+  // value: "250000.00",
+  // postfix: "+",
+  // },
+  // {
+  //   // metric: "Awards",
+  //   // value: "2",
+  // },
   {
     metric: "Years",
     value: "5",

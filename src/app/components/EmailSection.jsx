@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 // import GithubIcon from "/images/github-icon.svg";
-// import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import LinkedinIcon from "../../../public/linkedin-icon.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -56,7 +56,7 @@ const EmailSection = () => {
           try my best to get back to you!
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/bRylL318">
             <Image
               src={"/images/github-icon.svg"}
               height={100}
@@ -64,8 +64,13 @@ const EmailSection = () => {
               alt="Github Icon"
             />
           </Link>
-          <Link href="linkedin.com">
-            {/* <Image src={LinkedinIcon} alt="Linkedin Icon" /> */}
+          <Link href="https://www.linkedin.com/in/eldrin-brylle-latayan-b8b7a6286/">
+            <Image
+              src={LinkedinIcon}
+              height={100}
+              width={100}
+              alt="Linkedin Icon"
+            />
           </Link>
         </div>
       </div>
@@ -89,7 +94,7 @@ const EmailSection = () => {
                 id="email"
                 required
                 className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-                placeholder="eldrin.works@gmail.com"
+                placeholder="Your Email"
               />
             </div>
             <div className="mb-6">
